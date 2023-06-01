@@ -15,7 +15,8 @@ class UUIDHelper {
     return version;
   }
 
-  static Future<void> reset() async {
+  static Future<bool> reset() async {
     await _channel.invokeMethod('reset');
+    return true;
   }
 }
