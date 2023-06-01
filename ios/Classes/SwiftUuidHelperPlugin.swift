@@ -15,8 +15,11 @@ public class SwiftUuidHelperPlugin: NSObject, FlutterPlugin {
              let keyChain = KeyChain()
              let uuid = generateUUID(keyChain)
              result(uuid)
+         } else if call.method == "reset" {
+             let keyChain = KeyChain()
+             keyChain.remove(kChannelName)
          } else {
-             result(FlutterMethodNotImplemented)
+            result(FlutterMethodNotImplemented)
          }
      }
 

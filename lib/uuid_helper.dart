@@ -14,4 +14,8 @@ class UUIDHelper {
     final String version = await _channel.invokeMethod('getUniqueId');
     return version;
   }
+
+  static Future<void> reset() async {
+    await _channel.invokeMethod('reset');
+  }
 }
