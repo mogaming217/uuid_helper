@@ -25,6 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace 'io.github.nullptrx.uuid_helper'
     compileSdkVersion 28
 
     sourceSets {
