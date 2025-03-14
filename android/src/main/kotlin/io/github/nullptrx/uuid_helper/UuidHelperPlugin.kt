@@ -7,7 +7,6 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
 
 /** UuidHelperPlugin */
 public class UuidHelperPlugin : FlutterPlugin, MethodCallHandler {
@@ -20,12 +19,6 @@ public class UuidHelperPlugin : FlutterPlugin, MethodCallHandler {
 
   companion object {
     private val kChannelName = "nullptrx.github.io/uuid_helper"
-
-    @JvmStatic
-    fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), kChannelName)
-      channel.setMethodCallHandler(UuidHelperPlugin())
-    }
   }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
